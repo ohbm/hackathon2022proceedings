@@ -1,0 +1,83 @@
+\documentclass[10pt,a4paper,twocolumns]{proc}
+
+%--------------------------------------------
+% Input and language
+%--------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,british]{babel}
+
+%--------------------------------------------
+% License
+%--------------------------------------------
+\usepackage{ccicons}
+\usepackage[type={CC},modifier={by-nc-sa},version={4.0},magemodifier={-eu}]{doclicense}
+
+%--------------------------------------------
+% Graphics
+%--------------------------------------------
+\usepackage{graphicx}
+% \usepackage[pdftex]{graphicx}
+\usepackage{xcolor} % Required for specifying colors by name
+
+%--------------------------------------------
+% Hyperlinks
+%--------------------------------------------
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=black!60!red,          % color of internal links (change box color with linkbordercolor)
+	citecolor=black!70!green,        % color of links to bibliography
+	filecolor=black,         % color of file links
+	urlcolor=black        % color of external links
+}
+
+%--------------------------------------------
+% Nice tables
+%--------------------------------------------
+\usepackage{booktabs,multirow,makecell,dcolumn,longtable}
+\newcolumntype{d}{D{+}{ \pm }{-1}}
+
+%--------------------------------------------
+% Nice equations
+%--------------------------------------------
+\usepackage{textgreek,amsmath,nicefrac}
+
+%--------------------------------------------
+% Images and bibliography (with oxford comma)
+%--------------------------------------------
+\usepackage{caption,cleveref}
+\newcommand{\creflastconjunction}{, and\nobreakspace}
+\usepackage[style=apa6,sorting=nyt,refsegment=chapter,uniquename=false]{biblatex}
+\defbibheading{bibempty}{}
+
+\newcommand\BibTeX{{\rmfamily B\kern-.05em \textsc{i\kern-.025em b}\kern-.08em
+T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+%--------------------------------------------
+% Use french spacing
+%--------------------------------------------
+\frenchspacing
+
+%--------------------------------------------
+% Formatting
+%--------------------------------------------
+\newcommand{\authors}[1]{\emph{\footnotesize #1}}
+\newcommand{\affiliations}[1]{\emph{\scriptsize #1}}
+
+
+\title{Brainhack Proceedings}
+%\subtitle{subtitle}
+
+% Abilitate subfiles
+\usepackage{subfiles}
+
+% Bibliography & figures
+\graphicspath{{images/}}
+\addbibresource{\subfix{references/references.bib}}
+
+\begin{document}
+
+\subfile{summaries/template.tex}
+
+\end{document}
