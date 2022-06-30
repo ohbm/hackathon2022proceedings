@@ -1,7 +1,5 @@
 \documentclass[../main.tex]{subfiles}
 
-\addbibresource{\subfix{references/template.bib}}
-
 \begin{document}
 
 \section{Title of Summary}
@@ -20,32 +18,29 @@ Maximum:
 
 You can use the file \emph{template.tex} inside the folder \emph{summaries} as template. Put your tex file in the same folder at the end, and give it a specific name.
 
-If you want to add a figure, add it to the \emph{images} folder, and cite in text with the \emph{\\Cref} command (\Cref{fig:test}). Give it a specific name and a specific label (better if it contains the name of your tex file), and avoid generic names like \emph{fig.png}! Change the width accordingly to the portion of text you want to cover (half page/one column, full page, three quarters, ...). Don't bother too much positioning it, we'll take care of it for you (it'll be as close as possible to the reference or at the end of your summary).
+If you want to add a figure, add it to the \emph{images} folder, and cite in text with the \verb|\Cref| command (\Cref{fig:test}). Give it a specific name and a specific label (better if it contains the name of your tex file), and avoid generic names like \emph{fig.png}! Change the width accordingly to the portion of text you want to cover (half page/one column, full page, three quarters, ...). Don't bother too much positioning it, we'll take care of it for you (it'll be as close as possible to the reference or at the end of your summary).
 
-If you want to add a citation, the \emph{cleveref} package is imported in \emph{main.tex} with the APA 6e style. If you want to add a citation, you can do so with the \emph{\\textcite} and \emph{\\parencite} commands:
-Parenthesis citation of some paper \parencite{Gau2021} and in text citation of the same paper from \parencite{Gau2021}.
-Print the bibliography at the end, and add the bibliography resource file (\emph{.bib} with a specific name) in the \emph{references} folders, importing it in the preamble of this document.
+If you want to add a citation, the \emph{cleveref} package is imported in \emph{main.tex} with the APA 6e style. If you want to add a citation, you can do so with the \verb|\textcite| and \verb|\parencite| commands: \\
+Parenthesis citation of some paper \parencite{Gau2021} and in text citation of the same paper from \textcite{Gau2021}.
+
+Print the bibliography at the end, and add the bibliography resource file (\emph{.bib} with a specific name) in the \emph{references} folders, importing it in the preamble of the main file (around line 77).
 Finally, package everything and send it over via email, or open a PR to the git repository.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\textwidth]{test.png}
+	\includegraphics[width=0.5\textwidth]{test.png}
 	\caption{1 figure max, 250 characters for caption. Please use a specific name for your figure (avoid \emph{figure_1} and similar names).)}
 	% Add a label to reference in text. Make it specific!
 	\label{fig:test}
 \end{figure}
 
+-----------------------------------
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis lorem felis. Proin egestas lectus ut sem lacinia, eget laoreet augue fringilla. Etiam eu augue molestie, cursus justo at, scelerisque quam. Vivamus ullamcorper ut purus ut feugiat. Nam vitae hendrerit nunc. Nullam egestas sapien at libero sagittis, id porta augue tempor. Phasellus sit amet placerat tellus, et pharetra enim. Aliquam ullamcorper tellus odio, sed imperdiet erat semper at. Cras pellentesque tincidunt erat, ut sodales erat ornare nec. Vestibulum convallis nibh ut urna malesuada accumsan. Duis pretium felis eget magna scelerisque, id vulputate nisl bibendum. Nullam fringilla vel lacus nec consectetur. Nam imperdiet sollicitudin urna, nec ullamcorper mauris aliquam in.
 
 Morbi hendrerit nisi at aliquam venenatis. Duis cursus ornare ultrices. Integer rhoncus congue arcu, eu cursus eros dapibus at. Nunc quis lorem scelerisque, consequat leo ut, aliquet urna. Donec euismod, erat vel sodales condimentum, massa lorem ultrices mi, eget varius diam nulla a sapien. Morbi vel ornare lacus, at ornare leo. Vivamus cursus, nulla eget euismod mollis, sem tortor suscipit est, ullamcorper mattis elit tellus pretium mi. Morbi fringilla eros quis velit ultrices vestibulum. Nam eleifend vestibulum libero sed blandit. Praesent id lacus venenatis, blandit odio vel, pharetra risus. Etiam at commodo est.
 
-Aenean vitae tempor lacus. Morbi consectetur mollis risus vel fermentum. Vivamus eget dui quis enim vehicula vehicula eu eget est. Phasellus feugiat vitae neque fringilla pharetra. In massa tortor, luctus vel libero eu, rutrum sagittis ex. Nam ultricies quam ex, in pharetra est rhoncus eget. Phasellus placerat at ante quis pretium. Nullam sagittis lectus eget odio suscipit imperdiet. Etiam ut nisi ut ipsum congue dapibus. Aliquam facilisis vel elit ac tincidunt. Duis scelerisque diam et felis ullamcorper blandit. Morbi pulvinar nisi quis augue bibendum tempor.
-
-Nunc tempus aliquet eros a lacinia. Quisque eu dolor eu lorem luctus tristique accumsan quis ipsum. Nam congue nisi et mi eleifend tristique. Aliquam erat volutpat. Nullam mollis tincidunt mauris eget interdum. Cras quis purus malesuada lorem rhoncus ornare. Nulla posuere, augue eu semper ultricies, purus orci varius mi, hendrerit convallis lorem lorem non nulla. Nulla facilisi. Nunc posuere risus lorem, nec ultrices turpis rhoncus a. Aliquam posuere diam a nibh mattis, id mattis turpis vehicula. Duis auctor ex non ante maximus semper. Ut nibh lacus, dignissim sed varius quis, commodo nec felis. Morbi vel orci non nisl egestas efficitur. Aliquam hendrerit fermentum mattis.
-
-Integer placerat vulputate lectus ac vulputate. Mauris bibendum semper ligula. Mauris suscipit massa nec tortor pretium ornare quis id enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi sed velit in tortor dignissim commodo. Nam vel ipsum quis metus fermentum molestie. Sed a tortor vel nunc porta auctor vitae eu risus. Proin aliquam, felis sit amet finibus elementum, ipsum ante ultrices lacus, ac condimentum tellus nunc vel velit.
-
-Nulla eget enim lacus. Vestibulum sollicitudin felis ante, ac maximus libero finibus a. Aliquam vitae neque quis urna elementum faucibus. Aenean lobortis fringilla ante pulvinar malesuada. Phasellus lacinia tempor mi, ut dapibus sapien vulputate sit. 
+Aenean vitae tempor lacus. Morbi consectetur mollis risus vel fermentum. Vivamus eget dui quis enim vehicula vehicula eu eget est. Phasellus feugiat vitae neque fringilla pharetra. In massa tortor, luctus vel libero eu, rutrum sagittis ex.
 
 
 \printbibliography
