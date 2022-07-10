@@ -1,0 +1,23 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\section{DataLad-Dataverse integration}
+
+\authors{Benjamin Poldrack\textsuperscript{1}, Jianxiao Wu\textsuperscript{1,2}, Kelvin Sarink\textsuperscript{3}, Christopher J. Markiewicz \textsuperscript{4}, Alexander Q. Waite \textsuperscript{1}, Eliana Nicolaisen-Sobesky\textsuperscript{1}, Shammi More\textsuperscript{1}, Johanna Bayer\textsuperscript{5,6}, Jan Ernsting\textsuperscript{3,7}, Adina S. Wagner\textsuperscript{1}, Roza G. Bayrak \textsuperscript{8}, Laura K. Waite\textsuperscript{1},  Michael Hanke\textsuperscript{1,2}, Nadine Spychala \textsuperscript{9}}
+
+\affiliations{1. Institute of Neuroscience and Medicine, Research Centre Jülich, Jülich, Germany, 2. Medical Faculty, Heinrich Heine University Düsseldorf, 3. University of Münster, Institute for Translational Psychiatry, Münster, Germany, 4. Stanford University, 5. The University of Melbourne, Melbourne, Australia, 6. Orygen Youth Health, Melbourne, Australia, 7. University of Münster, Faculty of Mathematics and Computer Science, Münster, Germany, 8. Vanderbilt University, Nashville, TN USA, 9. Department of Informatics, University of Sussex, United Kingdom}
+
+The FAIR principles \parencite{Wilkinson2016} advocate to ensure and increase the Findability, Accessibility, Interoperability, and Reusability of research data in order to maximize their impact. Many open source software tools and services facilitate this aim. Among them is the Dataverse project \parencite{King2007}. Dataverse is open source software for storing and sharing research data, providing technical means for public distribution and archival of digital research data, and their annotation with structured metadata. It is employed by dozens of private or public institutions worldwide for research data management and data publication. DataLad \parencite{Halchenko2021}, similarly, is an open source tool for data management and data publication. It provides Git- and git-annex based data versioning, provenance tracking, and decentral data distribution as its core features. One of its central development drivers is to provide streamlined interoperability with popular data hosting services to both simplify and robustify data publication and data consumption in a decentralized research data management system \parencite{Hanke2021}. Past developments include integrations with the open science framework \parencite{Hanke2020} or webdav-based services such as sciebo, nextcloud, or the European Open Science Cloud \parencite{Halchenko2022}.
+
+In this hackathon project, we created a proof-of-principle integration of DataLad with Dataverse in the form of the Python package \texttt{datalad-dataverse} (github.com/datalad/datalad-dataverse). From a technical perspective, main achievements include the implementation of a git-annex special remote protocol for communicating with Dataverse instances, a new \texttt{create-sibling-dataverse} command that is added to the DataLad command-line and Python API by the \texttt{datalad-dataverse} extension, and standard research software engineering aspects of scientific software such as unit tests, continuous integration, and documentation.
+
+From a research data management and user perspective, this development equips DataLad users with the ability to programatically create Dataverse datasets (containers for research data and their metadata on Dataverse) from DataLad datasets (DataLad’s Git-repository-based core data structure) in different usage modes. Subsequently, DataLad dataset contents, its version history, or both can be published to the Dataverse dataset via a ‘datalad push’ command. Furthermore, published DataLad datasets can be consumed from Dataverse with a \texttt{datalad clone} call. A mode parameter configures whether Git version history, version controlled file content, or both are published and determines which of several representations the Dataverse dataset takes. A proof-of-principle implementation for metadata annotation allows users to supply metadata in JSON format, but does not obstruct later or additional manual metadata annotation via Dataverse’s web interface.
+
+Overall, this project delivered the groundwork for further extending and streamlining data deposition and consumption in the DataLad ecosystem. With DataLad-Dataverse interoperability, users gain easy additional means for data publication, archival, distribution, and retrieval. Post-Brainhack development aims to mature the current alpha version of the software into an initial v0.1 release and distribute it via standard Python package indices.
+
+
+\printbibliography
+
+
+\end{document}
