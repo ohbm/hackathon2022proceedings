@@ -1,3 +1,5 @@
+### :bangbang: Attention: do not open PRs to THIS repository. Instead, once ready, open a PR to the repository [hackathon2022proceedings](https://github.com/ohbm/hackathon2022proceedings) :bangbang:
+
 Here you can find the LaTeX and office templates for the Brainhack OHBM 2022 proceedings! Once ready, the full collection of proceedings will be submitted as an article to Aperture, making it public and citable.
 Submission is not mandatory, and it does not necessarily require deliverables nor major accomplishments during the Brainhack. A short description of your intentions, short-term and long-term goals and, if any, achievements is more than enough!
 
