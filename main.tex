@@ -5,7 +5,7 @@
 %--------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[spanish,british]{babel}
+\usepackage[spanish,german,british]{babel}
 
 %--------------------------------------------
 % License
@@ -19,6 +19,7 @@
 \usepackage{graphicx}
 % \usepackage[pdftex]{graphicx}
 \usepackage{xcolor} % Required for specifying colors by name
+\usepackage{subcaption}
 
 %--------------------------------------------
 % Hyperlinks
@@ -48,8 +49,10 @@
 %--------------------------------------------
 \usepackage{caption,cleveref}
 \newcommand{\creflastconjunction}{, and\nobreakspace}
-\usepackage[style=apa6,sorting=nyt,refsegment=chapter,uniquename=false]{biblatex}
+\usepackage[style=apa6,sorting=nyt,refsection=section,uniquename=false]{biblatex}
 \defbibheading{bibempty}{}
+
+\renewcommand*{\bibfont}{\footnotesize}
 
 \newcommand\BibTeX{{\rmfamily B\kern-.05em \textsc{i\kern-.025em b}\kern-.08em
 T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -62,6 +65,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 %--------------------------------------------
 % Formatting
 %--------------------------------------------
+\usepackage{enumitem}
 \newcommand{\authors}[1]{\emph{\footnotesize #1}}
 \newcommand{\affiliations}[1]{\\ \emph{\scriptsize #1} \\}
 
@@ -74,10 +78,16 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 % Bibliography & figures
 \graphicspath{{images/}}
-\addbibresource{\subfix{references/references.bib}}
+\addbibresource{\subfix{references/datalad-dataverse.bib}}
+\addbibresource{\subfix{references/VASOMOSAIC.bib}}
+\addbibresource{\subfix{references/rba.bib}}
+\addbibresource{\subfix{references/exploding_brains.bib}}
 
 \begin{document}
 
-\subfile{summaries/template.tex}
+\subfile{summaries/datalad-dataverse.tex}
+\subfile{summaries/VASOMOSAIC.tex}
+\subfile{summaries/rba.tex}
+\subfile{summaries/exploding_brains.tex}
 
 \end{document}
