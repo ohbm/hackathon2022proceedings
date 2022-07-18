@@ -10,7 +10,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@master
         with:
-          ref: master
+          ref: main
       - name: Prepare environment
         run: |
           mkdir -p ./out
