@@ -1,0 +1,25 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\section{The NARPS Open Pipelines Project}
+
+\authors{Elodie Germani\textsuperscript{1}, 
+Arshitha Basavaraj\textsuperscript{2}, Trang Cao\textsuperscript{3}, Rémi Gau,\textsuperscript{4} Anna Menacher\textsuperscript{5}, Camille Maumet\textsuperscript{1}}
+
+\affiliations{1. Univ Rennes, Inria, CNRS, Inserm, Rennes, France; 2. Intramural Research Program, NIMH, Bethesda, USA; 3. Monash University School of Psychological Sciences, Monash, VIC, Australia; 4. Institute of psychology, Université catholique de Louvain, Louvain la Neuve, Belgium; 5. Department of Statistics, University of Oxford, UK}
+
+% A short description of your intentions, short-term and long-term goals and, if any, achievements is more than enough!
+
+The goal of the NARPS Open Pipelines Project is to provide a public codebase that reproduces the 70 pipelines chosen by the 70 teams of the NARPS study~\parencite{botviniknezer2020}. The project is public and the code hosted on GitHub at~\url{https://github.com/Inria-Empenn/narps_open_pipelines}.
+
+This project initially emerged from the idea of creating an open repository of fMRI data analysis pipelines (as used by researchers in the field) with the broader goal to study and better understand the impact of analytical variability. NARPS -- a many-analyst study in which 70 research teams were asked to analyze the same fMRI dataset with their favorite pipeline -- was identified as an ideal usecase as it provides a large array of pipelines created by different labs. In addition, all teams in NARPS provided extensive (textual) description of their pipelines using the COBIDAS~\parencite{nichols2017} guidelines. All resulting statistic maps were shared on NeuroVault \parencite{gorgolewski2015} and can be used to assess the success of the reproductions. 
+
+At the OHBM Brainhack 2022, our goal was to improve the accessibility and reusability of the database, to facilitate new contributions and to reproduce more pipelines. We focused our efforts on the first two goals. By trying to install the computing environment of the database, contributors provided feedback on the instructions and on specific issues they faced during the installation. Two major improvements were made for the download of the necessary data: the original fMRI dataset and the original results (statistic maps stored in NeuroVault) were added as submodules to the GitHub repository. Finally, propositions were made to facilitate contributions: the possibility to use of the Giraffe toolbox~\parencite{giraffe_vanMourik2016} for contributors that are not familiar with NiPype~\parencite{gorgolewski2017} and the creation of a standard template to reproduce a new pipeline. 
+
+With these improvements, we hope that it will be easier for new people to contribute to reproduction of new pipelines. We hope to continue growing the codebase in the future. 
+
+\printbibliography
+
+
+\end{document}
