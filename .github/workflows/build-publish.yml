@@ -40,7 +40,7 @@ jobs:
           path: out
       - name: Copy built pdf
         run: |
-          mkdir compiled
+          mkdir -p ./compiled
           cp ./out/main.pdf ./compiled/main.pdf
       - name: Push on master branch
         uses: github-actions-x/commit@v2.9
