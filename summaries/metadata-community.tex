@@ -1,0 +1,22 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\section{Accelerating adoption of metadata standards for dataset descriptors}
+
+\authors{Cassandra Gould van Praag \textsuperscript{1}, Felix Hoffstaedter \textsuperscript{2}, Sebastian Urchs \textsuperscript{3}}
+
+\affiliations{1. Department of Psychiatry, Oxford University, Oxford, United Kingdom, 2. Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Research Centre Jülich, Jülich, Germany, 3. McGill, Montreal Neurological Institute - Hospital, Montreal, Quebec, Canada}
+
+-----------------------------------
+
+Thanks to efforts of the neuroimaging community, not least the brainhack community \parencite{Gau2021}, datasets are increasingly shared on open data repositories like OpenNeuro \parencite{Markiewicz2021-bf} using standards like BIDS \parencite{Gorgolewski2016-bp} for interoperability. As the amount of datasets and data repositories increases, we need to find better ways to search across them for samples that fit our research questions. In the same way that the wide adoption of BIDS makes data sharing and tool development easier, the wide adoption of consistent vocabulary for demographic, clinical and other sample metadata would make data search and integration easier. We imagine a future platform that allows cross dataset search and the pooling of data across studies. Efforts to establish such metadata standards have had some success in other communities \parencite{Field2008-kw, Stang2010-nl}, but adoption in the neuroscience community so far has been slow. We have used the space of the brainhack to discuss which challenges are hindering wide adoption of metadata standards in the neuroimaging community and what could be done to accelerate it.
+
+We believe that an important social challenge for the wider adoption of metadata standards is that it is hard to demonstrate their value without a practical use case. We therefore think that rather than focusing on building better standards, in the short term we need to prioritize small, but functional demonstrations that help convey the value of these standards and focus on usability and ease of adoption. Having consistent names and format for even a few metadata variables like age, sex, and diagnosis already allows for interoperability and search across datasets. Selecting a single vocabulary that must be used for annotating e.g. diagnosis necessarily lacks some precision but avoids the need to align slightly different versions of the same terms. Accessible tools can be built to facilitate the annotation process of such a basic metadata standard. The best standard will be poorly adopted if there are no easy to use tools that implement it. Efforts like the neurobagel project (neurobagel.org/) are trying to implement this approach to demonstrate a simple working use case for cross dataset integration and search. Our goal is to use such simpler demonstrations to build awareness and create a community around the goal of consistent metadata adoption.
+
+Our long term goal is to use the awareness of the value of shared metadata standards to build a community to curate the vocabularies used for annotation. The initially small number of metadata variables will have to be iteratively extended through a community driven process to determine what fields should be standardized to serve concrete use cases. Rather than creating new vocabularies the goal should be to curate a list of existing ones that can be contributed to where terms are inaccurate or missing. The overall goal of such a community should be to build consensus on and maintain shared standards for the annotation of neuroimaging metadata that support search and integration of data for an ever more reproducible and generalizable neuroscience.
+
+\printbibliography
+
+
+\end{document}
