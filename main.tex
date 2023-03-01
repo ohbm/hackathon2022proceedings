@@ -49,7 +49,7 @@
 %--------------------------------------------
 \usepackage{caption,cleveref}
 \newcommand{\creflastconjunction}{, and\nobreakspace}
-\usepackage[style=apa6,sorting=nyt,refsection=section,uniquename=false]{biblatex}
+\usepackage[style=apa6,sorting=nyt,uniquename=false]{biblatex}
 \defbibheading{bibempty}{}
 
 \renewcommand*{\bibfont}{\footnotesize}
@@ -67,10 +67,10 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 %--------------------------------------------
 \usepackage{enumitem}
 \newcommand{\authors}[1]{\emph{\footnotesize #1} \\}
-\newcommand{\affiliations}[1]{\emph{\scriptsize #1} \\}
+\newcommand{\affiliations}[1]{{\scriptsize #1} \\}
 
 
-\title{Brainhack Proceedings}
+\title{OHBM Brainhack 2022 Proceedings}
 %\subtitle{subtitle}
 
 % Abilitate subfiles
@@ -92,16 +92,385 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 \begin{document}
 
-\subfile{summaries/datalad-dataverse.tex}
-\subfile{summaries/VASOMOSAIC.tex}
-\subfile{summaries/rba.tex}
-\subfile{summaries/exploding_brains.tex}
+\maketitle
+
+\authors{Stefano Moia\textsuperscript{1, 2}, %
+Hao-Ting Wang\textsuperscript{3}, %
+Anibal Solon Heinsfeld\textsuperscript{4}, %
+Dorota Jarecka\textsuperscript{5}, %
+Yu-Fang Yang\textsuperscript{6}, %
+Stephan Heunis\textsuperscript{7}, %
+Alessandra Pizzuti\textsuperscript{8}, %
+Sebastian Dresbach\textsuperscript{8}, %
+Satrajit Ghosh\textsuperscript{9}, %
+Katja Heuer\textsuperscript{10}, %
+Roberto Toro\textsuperscript{10}, %
+Pierre-Louis Bazin\textsuperscript{11,12} %
+Steffen Bollmann\textsuperscript{13,14}, %
+Isil Poyraz Bilgin\textsuperscript{3}, %
+Peer Herholz\textsuperscript{15}, %
+Rémi Gau\textsuperscript{16}, %
+Samuel Guay\textsuperscript{17}, %
+Johanna Bayer\textsuperscript{18,19}, %
+Benjamin Poldrack\textsuperscript{7}, %
+Jianxiao Wu\textsuperscript{7,20}, %
+Kelvin Sarink\textsuperscript{21}, %
+Christopher J. Markiewicz \textsuperscript{22}, %
+Alexander Q. Waite \textsuperscript{7}, %
+Eliana Nicolaisen-Sobesky\textsuperscript{7}, %
+Shammi More\textsuperscript{7}, %
+Jan Ernsting\textsuperscript{21,23}, %
+Adina S. Wagner\textsuperscript{7}, %
+Roza G. Bayrak \textsuperscript{24}, %
+Laura K. Waite\textsuperscript{7}, %
+Michael Hanke\textsuperscript{7,20}, %
+Nadine Spychala \textsuperscript{25}, %
+\"Omer Faruk G\"ulban\textsuperscript{26,27}, %
+Leonardo Muller-Rodriguez\textsuperscript{28}, %
+Jacob Sanz-Robinson\textsuperscript{29}, %
+Mohammad Torabi\textsuperscript{29}, %
+Tyler James Wishard\textsuperscript{30}, %
+Cassandra Gould van Praag \textsuperscript{31}, %
+Felix Hoffstaedter \textsuperscript{7}, %
+Sebastian Urchs \textsuperscript{32}, %
+Elodie Germani\textsuperscript{33}, %
+Arshitha Basavaraj\textsuperscript{34}, %
+Trang Cao\textsuperscript{35}, %
+Anna Menacher\textsuperscript{36}, %
+Camille Maumet\textsuperscript{3}, %
+Francois Paugam\textsuperscript{37}, %
+Ruoqi Huang\textsuperscript{38}, %
+Ana Luísa Pinho\textsuperscript{39, 40}, %
+Yuchen Zhou\textsuperscript{41}, %
+Sladjana Lukic\textsuperscript{42}, %
+Pedro Pinheiro-Chagas\textsuperscript{43}, %
+Valentina Borghesani\textsuperscript{44}, %
+Ines Esteves\textsuperscript{45}, %
+Sarah E. Goodale\textsuperscript{46}, %
+Neville Magielse\textsuperscript{7}, %
+The Physiopy Community\textsuperscript{47}, %
+Lea Waller\textsuperscript{48}, %
+Kelly Garner\textsuperscript{49}, %
+Christopher R Nolan\textsuperscript{50}, %
+Daniel Borek\textsuperscript{51}, %
+Gang Chen\textsuperscript{52}, %
+Renzo (Laurentius) Huber\textsuperscript{26}, %
+R\"udiger Stirnberg\textsuperscript{53}, %
+Philipp Ehses\textsuperscript{53}, %
+Benedikt A Poser\textsuperscript{26}
+}
+\\
+\affiliations{1. Neuro-X Institute, École polytechnique fédérale de Lausanne, Geneva, Switzerland; %
+2. Department of Radiology and Medical Informatics (DRIM), Faculty of Medicine, University of Geneva, Geneva, Switzerland; %
+3. Centre de recherche de l'Institut universitaire de gériatrie de Montréal, Montréal, QC, Canada; %
+4. The University of Texas at Austin, Austin, Texas, USA; %
+5. McGovern Institute for Brain Research, Massachusetts Institute of Technology, Cambridge, MA, USA; %
+6. Division of Experimental Psychology and Neuropsychology, Department of Education and Psychology, Freie Universität Berlin, Berlin, Germany; %
+7. Institute of Neuroscience and Medicine, Research Centre Jülich, Jülich, Germany; %
+8. Maastricht University, Maastricht, Netherlands; %
+9. Massachussetts Institute of Technology, Boston, USA; %
+10. Institut Pasteur, Paris, France; %
+11. University of Amsterdam, Amsterdam, Netherlands; %
+12. Max Planck Institute for Human Cognitive and Brain Science, Leipzig, Germany; %
+13. School of Information Technology and Electrical Engineering, The University of Queensland, Brisbane, Australia; %
+14. Centre for Innovation in Biomedical Imaging Technology, University of Queensland, Brisbane, Australia; %
+15. NeuroDataSciene - ORIGAMI lab, Montreal Neurological Institute-Hospital, McGill University, Montreal, Canada; %
+16. Institut de recherche en sciences psychologique, Université catholique de Louvain. Louvain la neuve, Belgique; %
+17. Department of Psychology, University of Montreal, Canada; %
+18. Centre for Youth Mental Health, the University of Melbourne, Australia; %
+19. Orygen Youth Health, Australia; %
+20. Medical Faculty, Heinrich Heine University Düsseldorf; %
+21. University of Münster, Institute for Translational Psychiatry, Münster, Germany; %
+22. Stanford University, CA, USA; %
+23. University of Münster, Faculty of Mathematics and Computer Science, Münster, Germany; %
+24. Vanderbilt University, Nashville, TN USA; %
+25. Department of Informatics, University of Sussex, UK; %
+26. Department of Cognitive Neuroscience, Faculty of Psychology and Neuroscience, Maastricht University, Maastricht, The Netherlands; %
+27. Brain Innovation, Maastricht, The Netherlands; %
+28. Psychoinformatics Lab, Forschungszentrum J\"ulich, J\"ulich, Germany; %
+29. Neuroscience, McGill University, Quebec, Canada; %
+30. Psychiatry, University of California, Los Angeles, United States; %
+31. Department of Psychiatry, Oxford University, Oxford, UK; %
+32. McGill, Montreal Neurological Institute - Hospital, Montreal, Quebec, Canada; %
+33. Univ Rennes, Inria, CNRS, Inserm, Rennes, France; %
+34. Data Science and Sharing Team (DSST), Intramural Research Program, NIMH, Bethesda, USA; %
+35. Monash University School of Psychological Sciences, Monash, VIC, Australia; %
+36. Department of Statistics, University of Oxford, UK; %
+37. University of Montreal, Montreal, Quebec, Canada; %
+38. University of Toronto, Toronto, Ontario, Canada; %
+39. Western Institute for Neuroscience, Western University, London, Ontario, Canada; %
+40. Department of Computer Science, Faculty of Science, Western University, London, Ontario, Canada; %
+41. Department of Psychology, Carnegie Mellon University, Pittsburgh, USA; %
+42. Ruth S. Ammon College of Education and Health Sciences, Department of Communication Sciences and Disorders, Adelphi University, San Francisco, CA, USA; %
+43. University of California, San Francisco, Department of Neurology and Department of Neurological Surgery, San Francisco, CA, USA; %
+44. Department of Psychology, Faculty of Psychology and Science of Education, University of Geneva, Geneva, Switzerland; %
+45. ISR-Lisboa and Department of Bioengineering, Instituto Superior Técnico – Universidade de Lisboa, Lisbon, Portugal; %
+46. Department of Biomedical Engineering, Vanderbilt University; %
+47. physiopy.github.io; %
+48. Charité Universitätsmedizin Berlin, corporate member of Freie Universität Berlin and Humboldt-Universität zu Berlin, Department of Psychiatry and Neurosciences CCM, Berlin, Germany; %
+49. School of Psychology, The University of Queensland, St. Lucia, 4072, QLD, Australia; %
+50. School of Psychology, The University of New South Wales, NSW, Australia; %
+51. Department of Data Analysis, Faculty of Psychology and Educational Sciences, Ghent University, Ghent, Belgium; %
+52. Scientific and Statistical Computing Core, NIMH, NIH, Department of Health and Human Services, USA; %
+53. German Center for Neurodegenerative Diseases (DZNE), Bonn, Germany.%
+}
+\\
+
+\section*{Introduction}
+
+The Organisation of Human Brain Mapping BrainHack (shortened as OHBM
+Brainhack in the article ) is a yearly satellite event of the main OHBM
+meeting, organised by the Open Science Special Interest Group following
+the model of Brainhack hackathons \parencite{Gau2021}.
+Where other hackathons set up a competitive environment based on
+outperforming other participants' projects, Brainhacks privilege a
+collaborative environment in which participants can freely collaborate
+and exchange ideas within and between projects.
+
+This edition of the OHBM Brainhack, that run across the world over four
+days, was particularly special for two reasons: it celebrated the tenth
+year anniversary of Brainhack, and, like the main OHBM conference, it
+was the first edition to feature an in-person event after two years of
+virtual events. For this reasons, the whole organisation rotated around
+five main principles:
+
+\begin{enumerate}
+\tightlist
+\item
+  Providing a hybrid event incorporating the positive aspects of
+  in-person and virtual events alike,
+\item
+  Celebrating the 10\textsuperscript{th} year anniversary of the
+  Brainhack by bringing back a hands-on newcomer-friendly hacking and
+  learning experience, enhancing the Hacktrack and formatting the
+  Traintrack as a collection of materials to consult beforehand and as
+  spontaneous meetings of the participants aimed to learn together,
+\item
+  Bridging the gap between the Brainhack community and the main
+  neuroimaging software developer group, e.g. AFNI, FSL, SPM,
+\item
+  Due to amount of work required to meet the previous three principles,
+  incorporating from the beginning a team of core organisers with a
+  democratic approach to organisation, with a member in charge of an
+  aspect of the event,
+\item
+  Brainhack event organisation should always be experimental, trying
+  different solutions and formats to find a way to improve Brainhack
+  events overall. 
+\end{enumerate}
+
+The next pages, after a quick explanation of each main contribution of
+the core team, are dedicated to the summaries of the projects that were
+developed during the four days of hacking.
+
+\section{Hacktrack}
+
+\authors{Dorota Jarecka\textsuperscript{1}, %
+Yu-Fang Yang\textsuperscript{2}, %
+Hao-Ting Wang\textsuperscript{3}, %
+Stefano Moia\textsuperscript{4, 5}}
+%
+\affiliations{1. McGovern Institute for Brain Research, Massachusetts Institute of Technology, Cambridge, MA, USA; %
+2. Division of Experimental Psychology and Neuropsychology, Department of Education and Psychology, Freie Universität Berlin, Berlin, Germany; %
+3. Centre de recherche de l'Institut universitaire de gériatrie de Montréal, Montréal, QC, Canada; %
+4. Neuro-X Institute, École polytechnique fédérale de Lausanne, Geneva, Switzerland; %
+5. Department of Radiology and Medical Informatics (DRIM), Faculty of Medicine, University of Geneva, Geneva, Switzerland.}
+
+The key component of each Brainhack is hacking. Hacking part, known as
+hacktrack, is where attendees collaborate on projects and explore their
+own ideas. There are 4 elements of hacktrack that were organised:
+project submission, project pitch, hacking period and project summary.
+For the project submission, we used the GitHub issue submission process
+that was used during the recent years. We updated and simplified a
+project template from previous years and asked project leaders to open
+an issue for each project. Each issue after quick check was approved by
+the moderators and automatic workflows written by the team were
+responsible for sending project descriptions to the Brainhack page and
+setting Discord's channels. We received 38 projects that were submitted
+using this system. The project pitch was set for the morning of the
+first day and everyone had 2 minutes to talk about the suggested project
+and possible collaborations. After the pitches people had a chance to
+talk to each other and join the projects they were interested in. This
+year, we tried to maximise the time for hacking by providing a sparse
+schedule for talks. The closing ceremony of the Brainhack featured 23
+project reports, in which teams talked about their experiences and
+described the work they accomplished.
+
+This edition we allowed remote attendance from other locations. We
+organised three hubs aiming to cover all time zones, including 1)
+Asia-Pacific, 2) Glasgow, Europe, Middle East, and Africa, and 3) the
+Americas, to foster inclusiveness in hybrid conference format. We also
+ensured that each hub had one live streamed session with the physical
+hub in Glasgow.
+
+\section{Traintrack}
+\authors{Yu-Fang Yang\textsuperscript{1}, %
+Dorota Jarecka\textsuperscript{2}}
+%
+\affiliations{1. Division of Experimental Psychology and Neuropsychology, Department of Education and Psychology, Freie Universität Berlin, Berlin, Germany; %
+2. McGovern Institute for Brain Research, Massachusetts Institute of Technology, Cambridge, MA, USA.}
+
+Traintrack is the educational component of Brainhack events. The aim is
+to introduce tools and skills for attendees to start hacking. Unlike
+conventional scientific educational workshops centred around lectures
+and talks, data science skills are better learned through hands-on
+experience than lectures. With the Brainhack community growing mature,
+the community has developed their own curated educational material.
+\href{https://school.brainhackmtl.org/}{\emph{Brainhack School}} has
+supplied high-quality content for independent study on a variety of
+themes.
+
+This year, we combine the collaborative nature of brainhack projects and
+educational content to reimagine the format of traintack. Thus, we
+replaced tutorial lectures in the previous editions with curated online
+educational contents, released them prior to the main event, and
+attempted to integrate them with the hacktrack projects. This format
+also provides more time (i.e. schedule) and space (i.e. minimising large
+space not used for hacking) for attendees to self-organise. Participants
+were encouraged to form study groups on five suggested topics: 1)
+setting up your system for analysis 2) python for data analysis, 3)
+Machine learning for neuroimaging, 4) Version control systems, 5) Cloud
+resource. The curated content was advertised on the main hackathon
+website. One dedicated channel was created on the hackathon Discord
+server. Individuals can determine the nature of their experiences and
+the skills they would like to acquire. Participants can form their own
+study group and on any selected topic. We would like to continue the
+experimentation on this format in the coming year.
+
+\section{Platforms, website, and IT}
+\authors{Anibal Solon Heinsfeld\textsuperscript{1}}
+%
+\affiliations{1. The University of Texas at Austin, Austin, Texas, USA.}
+
+Trying to bring a positive experience for both virtual and in-person
+attendees, we implemented several integrated solutions to ease
+communication in the different phases of the Hackathon, focusing on a
+single platform for the main event.
+
+The first solution was the project's advertisement, in which the
+community promotes their projects, the goals for the Hackathon, and
+relevant information to get people interested and set to collaborate. To
+do so, we have used the Github Issues feature in the Hackathon
+repository as the entrance for projects. Github Issues has been proven
+to be accepted by the community that relies on Github for code
+versioning, and was a successful approach in past hackathons.
+
+In this edition, we were able to use Github Issue forms, a beta feature
+in Github. Past use of issues for project registration relies on
+Markdown code to specify which information the hacker needs to provide.
+However, the code can be easily broken and changed, which makes it
+harder to parse the information in automated setups. Towards this issue,
+the Issue Form can lower the barrier when submitting a project. By
+specifying form fields for the participants to fill, they faced a common
+web form instead of a Markdown editor, bringing more structure to their
+inputs and not requiring them to write code. After the organisers' quick
+validation, the project information was provided to the rest of the
+system. Per an automated pipeline, this information was compiled into
+the website.
+
+The second solution was the central platform for real-time
+communication, namely Discord. For the first time using the platform for
+an OHBM Hackathon, Discord showed potential in bringing an all-in-one
+solution. Its track record with different communities and their formats
+was an essential prospect for the success of a hybrid hackathon,
+together with the different ways of communicating provided by the
+platform. Specifically, Discord offered chat and audio/video channels,
+with fine-tuned controls on permissions to see a channel, speak and use
+the camera, and send messages. With these features, we were able to
+create experiences for the attendants, such as text channels for
+consolidating information about the hackathon, main stages controlled by
+the hub hosts, a channel to join projects and hubs, and integrated text
+\& voice channels for each project. The main stage was connected to a
+laptop in the venue, providing synchronous streaming for announcements,
+project pitches and progress reports for those participating virtually.
+The project channels were automatically created together with the Github
+Issues. However, given the thriving number of projects, the Discord
+server was replete with project channels. Such a scenario was
+overwhelming for the attendants, especially for those approaching
+Discord for the first time. To ameliorate this issue, a main projects
+channel was created, so attendants could automatically join projects via
+related emoji reactions. The project channels were of public access;
+however, only displayed upon joining the project. Besides initial
+technical hiccups, the platform proved a good alternative for such an
+event format.
+
+These integrated solutions smoothed the organisation of the event, the
+virtual platform provided great support for the on-line participants.
+However, there was not a lot of interaction between in-person and online
+participants, and projects were mainly either virtual or in-person (with
+few exceptions). This is probably because hybrid hacking provides
+challenges for organisation and attendants alike, even just in the
+physical limitations of being able to have a video conference with a
+split team. It is important to consider, however, that this was also the
+first in-person event for many participants, who preferred in-person
+interaction and collaboration rather than the same on-line interaction
+that characterised such events in the previous two years.
+
+\section{Project Reports}
+
+In total, 23 projects were presented, of which 11 presented a written
+report.
+
 \subfile{summaries/ahead-project.tex}
-\subfile{summaries/hyppomriqc.tex}
 \subfile{summaries/brainhack-cloud.tex}
+\subfile{summaries/datalad-dataverse.tex}
+\subfile{summaries/exploding_brains.tex}
+\subfile{summaries/hyppomriqc.tex}
+\subfile{summaries/metadata-community.tex}
 \subfile{summaries/narps-open-pipelines.tex}
 \subfile{summaries/neurocausal.tex}
 \subfile{summaries/physiopy-documentation.tex}
-\subfile{summaries/metadata-community.tex}
+\subfile{summaries/rba.tex}
+\subfile{summaries/VASOMOSAIC.tex}
+
+\section{Conclusion and future directions}
+\authors{Stefano Moia\textsuperscript{1, 2}, %
+Hao-Ting Wang\textsuperscript{3}}
+%
+\affiliations{1. Neuro-X Institute, École polytechnique fédérale de Lausanne, Geneva, Switzerland; %
+2. Department of Radiology and Medical Informatics (DRIM), Faculty of Medicine, University of Geneva, Geneva, Switzerland; %
+3. Centre de recherche de l'Institut universitaire de gériatrie de Montréal, Montréal, QC, Canada.}
+
+
+Approaching the organisation of an event as an experiment allows
+incredible freedom and dynamicity, albeit knowing that there will be
+risks and venues of improvement for the future.
+
+The organisation managed to provide a positive onsite environment,
+aiming to allow participants to self-organise in the spirit of the
+Brainhack \parencite{Gau2021}, with plenty of moral - and physical - support.
+
+The technical setup, based on heavy automatisation flow to allow project
+submission to be streamlined, was a fundamental help to the organisation
+team, that would benefit even more from the improvement of such
+automatisation flows.
+
+This year, representatives of AFNI, FSL, and SPM (among the major
+neuroscience software developers) took part in the event, and their
+presence was appreciated both by other participants and themselves. In
+the future, connecting to more developers, not only from the MRI
+community, might improve the quality of the Brainhack even more.
+
+The most challenging element of the organisation was setting up an
+hybrid event. While this element did not go as smoothly as it could
+have, this experimental setup seemed to have worked, allowing the
+participation of about 70 participants online. However, there is still a
+lot to improve for a truly hybrid event. For instance, it is important
+to allow spaces (both in time and space) for participants on-site to
+interact with online participants, and more attention, time, volunteers,
+and equipment has to be put to achieve a smooth online participation.
+For this reason, the Open Science Special Interest Group instituted a
+position to have a dedicated person for the hybridisation process. The
+other challenge was to welcome newcomers into this heavily
+project-development-oriented event. While newcomers managed to
+collaborate with projects and self-organise to learn open science
+related skills, this integration of pre-event train track and beginner
+friendly process will benefit from more attention.
+
+Overall this HBM Brainhack was a successful outcome for the organisation
+team experiment, and we hope that our findings will be helpful to future
+Brainhack events organisations.
+
+\printbibliography
 
 \end{document}
