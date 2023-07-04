@@ -1,0 +1,34 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\subsection{DataLad Catalog}
+
+\authors{Stephan Heunis\textsuperscript{1}, %
+Adina S. Wagner\textsuperscript{1}, %
+Alexander Q. Waite\textsuperscript{1}, %
+Benjamin Poldrack\textsuperscript{1}, %
+Christian Mönch\textsuperscript{1}, %
+Julian Kosciessa\textsuperscript{2}, %
+Laura Waite\textsuperscript{1}, %
+Leonardo Muller-Rodriguez\textsuperscript{1}, %
+Michael Hanke\textsuperscript{1}, %
+Michał Szczepanik\textsuperscript{1}, %
+Remi Gau\textsuperscript{3}, %
+Yaroslav O. Halchenko\textsuperscript{4}}
+%
+\affiliations{1. Institute of Neuroscience and Medicine, Research Centre Jülich, Jülich, Germany; %
+2. Donders Institute for Brain, Cognition and Behaviour, Radboud University, Nijmegen, The Netherlands; %
+3. Cross-modal perception plasticity lab, Université Catholique de Louvain, Louvain la neuve, Belgium; %
+4. Center for Open Neuroscience, Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA;}
+
+The importance and benefits of making research data Findable, Accessible, Interoperable, and Reusable are clear \parencite{Wilkinson2016}. But of equal importance is our ethical and legal obligations to protect the personal data privacy of research participants. So we are struck with this apparent contradiction: how can we share our data openly…yet keep it secure and protected?
+
+To address this challenge: structured, linked, and machine-readable metadata presents a powerful opportunity. Metadata provides not only high-level information about our research data (such as study and data acquisition parameters) but also the descriptive aspects of each file in the dataset: such as file paths, sizes, and formats. With this metadata, we can create an abstract representation of the full dataset that is separate from the actual data content. This means that the content can be stored securely, while we openly share the metadata to make our work more FAIR.
+
+In practice, the distributed data management system DataLad \parencite{Halchenko2021} and its extensions for metadata handling and catalog generation are capable of delivering such solutions. \texttt{datalad} (github.com/datalad/datalad) can be used for decentralised management of data as lightweight, portable and extensible representations. \texttt{datalad-metalad} (github.com/datalad/datalad-metalad) can extract structured high- and low-level metadata and associate it with these datasets or with individual files. And at the end of the workflow, \texttt{datalad-catalog} (github.com/datalad/datalad-catalog) can turn the structured metadata into a user-friendly data browser.
+
+This hackathon project focused on the first round of user testing of the alpha version of \texttt{datalad-catalog}, by creating the first ever user-generated catalog (https://jkosciessa.github.io/datalad_cat_test). Further results included a string of new issues focusing on improving user experience, detailed notes on how to generate a catalog from scratch, and code additions to allow the loading of local web-assets so that any generated catalog can also be viewed offline.
+
+
+\end{document}
