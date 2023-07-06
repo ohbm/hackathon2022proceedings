@@ -31,7 +31,7 @@ jobs:
         with:
           root_file: main.tex
           compiler: pdflatex
-          args: -interaction=nonstopmode -output-directory=./out main.tex -shell-escape
+          args: -interaction=nonstopmode -output-directory=./out -shell-escape
       - name: Upload pdf to workflow final
         if: ${{ always() }}
         uses: actions/upload-artifact@v3.1.2
