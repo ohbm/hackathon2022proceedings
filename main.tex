@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper,twocolumns]{proc}
+\documentclass[12pt,a4paper]{proc}
 
 %--------------------------------------------
 % Input and language
@@ -6,6 +6,15 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish,german,british]{babel}
+
+%--------------------------------------------
+% AMA-style
+%--------------------------------------------
+\usepackage{setspace}\doublespacing
+\usepackage[superscript]{cite}
+\usepackage{indentfirst}
+\author{}\date{} % ignore LaTeX's author and date commands (they print below the title)
+\bibliographystyle{ama}
 
 %--------------------------------------------
 % License
@@ -54,14 +63,14 @@
 \usepackage{textgreek,amsmath,nicefrac}
 
 %--------------------------------------------
-% Images and bibliography (with oxford comma)
+% Images and bibliography
 %--------------------------------------------
 \usepackage{caption,cleveref}
-\usepackage[super,sort&compress]{natbib}
-\setcitestyle{comma,numbers,super,open={},close={}} 
-\makeatletter
-\renewcommand\@biblabel[1]{#1.}
-\makeatother
+% \usepackage[super,sort&compress]{natbib}
+% \setcitestyle{comma,numbers,super,open={},close={}} 
+% \makeatletter
+% \renewcommand\biblabel[1]{#1.}
+% \makeatother
 %--------------------------------------------
 % Use french spacing
 %--------------------------------------------
@@ -76,7 +85,6 @@
 
 % \usepackage{lineno}
 % \linenumbers
-
 
 \title{Proceedings of the OHBM Brainhack 2022}
 %\subtitle{subtitle}
@@ -101,9 +109,7 @@
 
 \begin{document}
 
-\maketitle
-
-\authors{Stefano Moia\textsuperscript{1, 2, 3}, %
+\hfill\authors{Stefano Moia\textsuperscript{1, 2, 3}, %
 Hao-Ting Wang\textsuperscript{1, 4}, %
 Anibal S. Heinsfeld\textsuperscript{5, 6}, %
 Dorota Jarecka\textsuperscript{7}, %
@@ -280,6 +286,12 @@ The physiopy community\textsuperscript{86}, %
 }
 \\
 
+\vspace{-0.25in} % reduce space before title
+{\let\newpage\relax\maketitle} % print title
+\vspace{-1in} % reduce space after title
+
+
+
 \begin{abstract}
 OHBM Brainhack 2022 took place in June 2022. The first hybrid OHBM hackathon, it had an in-person component taking place in Glasgow and three hubs around the globe to improve inclusivity and fit as many timezones as possible.
 In the buzzing setting of the Queen Margaret Union and of the virtual platform, 23 projects were presented for development.
@@ -291,7 +303,7 @@ Following are the reports of 14 of those, as well as a recapitulation of the org
 The Organisation of Human Brain Mapping BrainHack (shortened to OHBM
 Brainhack herein) is a yearly satellite event of the main OHBM
 meeting, organised by the Open Science Special Interest Group following
-the model of Brainhack hackathons\citep{Gau2021}.
+the model of Brainhack hackathons\cite{Gau2021}.
 Where other hackathons set up a competitive environment based on
 outperforming other participants' projects, Brainhacks foster a
 collaborative environment in which participants can freely collaborate
@@ -471,8 +483,8 @@ that characterised such events in the previous two years.
 
 \section{Project Reports}
 
-The peculiar nature of a Brainhack\citep{Gau2021} reflects in the nature of the projects developed during the event, that can span very different types of tasks.
-While most projects feature more \'hackathon-style\' software development, in the form of improving software integration (\Cref{sec:DLDI}), API refactoring (\Cref{sec:Neuroscout}), or creation of new toolboxes and platforms (\Cref{sec:NeuroCausal,sec:NARPS,sec:pymc}), the inclusion of newcomers and participants with less strong software development skills can foster projects oriented to user testing (\Cref{sec:DLC,sec:NARPS}) or documentation compilation (\Cref{sec:physiopy}).
+The peculiar nature of a Brainhack\cite{Gau2021} reflects in the nature of the projects developed during the event, that can span very different types of tasks.
+While most projects feature more `hackathon-style' software development, in the form of improving software integration (\Cref{sec:DLDI}), API refactoring (\Cref{sec:Neuroscout}), or creation of new toolboxes and platforms (\Cref{sec:NeuroCausal,sec:NARPS,sec:pymc}), the inclusion of newcomers and participants with less strong software development skills can foster projects oriented to user testing (\Cref{sec:DLC,sec:NARPS}) or documentation compilation (\Cref{sec:physiopy}).
 The scientific scopes of Brainhacks were reflected in projects revolving around data exploration (\Cref{sec:AHEAD,sec:HyppoMRIQC}) or model development (\Cref{sec:pymc}), or adding aspects of open science practices (namely, the Brain Imaging Data Structure) to toolboxes  (\Cref{sec:FLUX,sec:vasomosaic}).
 Finally, fostering a collaborative environment and avoiding pitching projects against each others not only opens up the possibility for participants to fluidly move between different groups, but also to have projects which sole aim is supporting other projects (\Cref{sec:BHC}), learning new skills by having fun (\Cref{sec:explodingbrains}), or fostering discussions and conversations among participants to improve the adoption of open science practices (\Cref{sec:metadata}).  
 
@@ -508,7 +520,7 @@ risks and venues of improvement for the future.
 
 The organisation managed to provide a positive onsite environment,
 aiming to allow participants to self-organise in the spirit of the
-Brainhack\citep{Gau2021}, with plenty of moral - and physical - support.
+Brainhack\cite{Gau2021}, with plenty of moral - and physical - support.
 
 The technical setup, based on heavy automatisation flow to allow project
 submission to be streamlined, was a fundamental help to the organisation
@@ -541,6 +553,7 @@ Overall this OHBM Brainhack was a successful outcome for the organisation
 team experiment, and we hope that our findings will be helpful to future
 Brainhack events organisations.
 
+\bibliographystyle{ama}
 \printbibliography
 
 \end{document}
