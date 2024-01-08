@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\subsection{MOSAIC for VASO fMRI} 
+\subsection{MOSAIC for VASO fMRI}\label{sec:vasomosaic}
 
 \authors{Renzo (Laurentius) Huber, %
 Remi Gau, %
@@ -14,7 +14,7 @@ Benedikt A. Poser}
 Vascular Space Occupancy (VASO) is a functional magnetic resonance imaging (fMRI) method that is used for high-resolution cortical layer-specific imaging\citep{Huber2021a}. Currently, the most popular sequence for VASO at modern SIEMENS scanners is the one by \textcite{Stirnberg2021a} from the DZNE in Bonn, which is employed at more than 30 research labs worldwide. This sequence concomitantly acquires fMRI BOLD and blood volume signals. In the SIEMENS' reconstruction pipeline, these two complementary fMRI contrasts are mixed together within the same time series, making the outputs counter-intuitive for users. Specifically:
 
 \begin{itemize}
-    \item The 'raw' NIfTI converted time-series are not BIDS compatible (see \href{https://github.com/bids-standard/bids-specification/issues/1001}{https://github.com/bids-standard/bids-specification/issues/1001}).
+    \item The \'raw\' NIfTI converted time-series are not BIDS compatible (see \url{https://github.com/bids-standard/bids-specification/issues/1001}).
     
     \item The order of odd and even BOLD and VASO image TRs is unprincipled, making the ordering dependent on the specific implementation of NIfTI converters.
 \end{itemize}
@@ -34,8 +34,8 @@ We are happy to share the compiled SIEMENS ICE (Image Calculation Environment) f
 	\label{fig:VASOMOSAIC}
 \end{figure}
 
-Furthermore, Remi Gau, generated a template dataset that exemplifies how one could to store layer-fMRI VASO data. This includes all the meta data for ‘raw’ and ‘derivatives’. Link to this VASO fMRI BIDS demo: \href{https://gin.g-node.org/RemiGau/ds003216/src/bids_demo}{https://gin.g-node.org/RemiGau/ds003216/src/bids\textunderscore demo}.
+Furthermore, Remi Gau, generated a template dataset that exemplifies how one could to store layer-fMRI VASO data. This includes all the meta data for ‘raw’ and ‘derivatives’. Link to this VASO fMRI BIDS demo: \url{https://gin.g-node.org/RemiGau/ds003216/src/bids_demo}.
 
-Acknowledgements: We thank Chris Rodgers for instructions on how to overwrite existing reconstruction binaries on the SIEMENS scanner without rebooting. We thank David Feinberg, Alex Beckett and Samantha Ma for helping in testing the new reconstruction binaries at the Feinbergatron scanner in Berkeley via remote scanning. We thank Maastricht University Faculty of Psychology and Neuroscience for supporting this project with 2.5 hours of 'development scan time'.
+Acknowledgements: We thank Chris Rodgers for instructions on how to overwrite existing reconstruction binaries on the SIEMENS scanner without rebooting. We thank David Feinberg, Alex Beckett and Samantha Ma for helping in testing the new reconstruction binaries at the Feinbergatron scanner in Berkeley via remote scanning. We thank Maastricht University Faculty of Psychology and Neuroscience for supporting this project with 2.5 hours of \'development scan time\'.
 
 \end{document}
