@@ -13,7 +13,7 @@
 
 % %% Using a mix of:
 % %%   - Overleaf's AMA style (https://www.overleaf.com/latex/templates/ama-format-assignment-template/tyjmwydvdqng),
-% %%   - DLI-stats biblatex-ama (https://github.com/dli-stats/biblatex-ama),
+% %%   - DLI-stats biblatex-ama (https://github.com/dli-stats/biblatex-ama)
 
 \usepackage[style=ama, citestyle=ama, bibstyle=ama]{biblatex}
 \usepackage[margin=1in]{geometry}
@@ -96,6 +96,10 @@
 
 % \usepackage{lineno}
 % \linenumbers
+
+\usepackage[authormarkup=none,defaultcolor=orange]{changes}
+% \usepackage[final]{changes}
+
 
 \title{Proceedings of the OHBM Brainhack 2022}
 %\subtitle{subtitle}
@@ -312,7 +316,7 @@ Following are the reports of 14 of those, as well as a recapitulation of the org
 \section*{Introduction}
 
 The Organisation of Human Brain Mapping BrainHack (shortened to OHBM
-Brainhack herein) is a yearly satellite event of the main OHBM
+Brainhack \added{herein}) is a yearly satellite event of the main OHBM
 meeting, organised by the Open Science Special Interest Group following
 the model of Brainhack hackathons\supercite{Gau2021}.
 Where other hackathons set up a competitive environment based on
@@ -494,13 +498,12 @@ that characterised such events in the previous two years.
 
 \section{Project Reports}
 
-The peculiar nature of a Brainhack\supercite{Gau2021} reflects in the nature of the projects developed during the event, that can span very different types of tasks.
+\added{The peculiar nature of a Brainhack\supercite{Gau2021} reflects in the nature of the projects developed during the event, that can span very different types of tasks.
 While most projects feature more `hackathon-style' software development, in the form of improving software integration (\Cref{sec:DLDI}), API refactoring (\Cref{sec:Neuroscout}), or creation of new toolboxes and platforms (\Cref{sec:NeuroCausal,sec:NARPS,sec:pymc}), the inclusion of newcomers and participants with less strong software development skills can foster projects oriented to user testing (\Cref{sec:DLC,sec:NARPS}) or documentation compilation (\Cref{sec:physiopy}).
 The scientific scopes of Brainhacks were reflected in projects revolving around data exploration (\Cref{sec:AHEAD,sec:HyppoMRIQC}) or model development (\Cref{sec:pymc}), or adding aspects of open science practices (namely, the Brain Imaging Data Structure) to toolboxes  (\Cref{sec:FLUX,sec:vasomosaic}).
-Finally, fostering a collaborative environment and avoiding pitching projects against each others not only opens up the possibility for participants to fluidly move between different groups, but also to have projects which sole aim is supporting other projects (\Cref{sec:BHC}), learning new skills by having fun (\Cref{sec:explodingbrains}), or fostering discussions and conversations among participants to improve the adoption of open science practices (\Cref{sec:metadata}).  
+Finally, fostering a collaborative environment and avoiding pitching projects against each others not only opens up the possibility for participants to fluidly move between different groups, but also to have projects which sole aim is supporting other projects (\Cref{sec:BHC}), learning new skills with entertaining tasks (\Cref{sec:explodingbrains}), or fostering discussions and conversations among participants to improve the adoption of open science practices (\Cref{sec:metadata}).  
 
-
-Following are the 14 submitted reports of the 23 projects presented at the OHBM Brainhack.
+Following are the 14 submitted reports of the 23 projects presented at project wrap-up during the OHBM Brainhack.}
 
 \subfile{summaries/ahead-project.tex}
 \subfile{summaries/brainhack-cloud.tex}
