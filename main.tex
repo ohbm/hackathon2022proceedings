@@ -1,3 +1,36 @@
+\ifx\condition\undefined
+\immediate\write18{
+echo pdflatex
+−−jobname=main
+"\gdef\condition{0}\input\jobname"}
+\immediate\write18{
+pdflatex
+−−jobname=main_trackchanges
+"\gdef\string\condition{1}
+\string\input\space\jobname"}
+\immediate\write18{
+pdflatex
+−−jobname=main_linenum
+"\gdef\string\condition{2}
+\string\input\space\jobname"}
+\immediate\write18{
+pdflatex
+−−jobname=main_linenum_trackchanges
+"\gdef\string\condition{3}
+\string\input\space\jobname"}
+\immediate\write18{
+pdflatex
+−−jobname=main_textonly
+"\gdef\string\condition{4}
+\string\input\space\jobname"}
+\immediate\write18{
+pdflatex
+−−jobname=main_textonly_trackchanges
+"\gdef\string\condition{4}
+\string\input\space\jobname"}
+\expandafter\stop
+\fi
+
 \documentclass[12pt,a4paper,onecolumn]{article}
 
 %--------------------------------------------
@@ -5,7 +38,7 @@
 %--------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[spanish,german,british]{babel}
+\usepackage[spanish,british]{babel}
 
 %--------------------------------------------
 % AMA-style
@@ -91,14 +124,27 @@
 %--------------------------------------------
 % Formatting for submission to AN
 %--------------------------------------------
-\usepackage[nolists,markers,figuresonly]{endfloat}
-\renewcommand{\processdelayedfloats}{}
-
-% \usepackage{lineno}
-% \linenumbers
-
-% \usepackage[authormarkup=none,defaultcolor=orange]{changes}
-\usepackage[final]{changes}
+\ifcase\condition % main
+	\usepackage[final]{changes}
+\or % main_trackchanges
+	\usepackage[authormarkup=none,defaultcolor=orange]{changes}
+\or % main_linenum
+	\usepackage{lineno}
+	\linenumbers
+	\usepackage[final]{changes}
+\or % main_linenum_trackchanges
+	\usepackage{lineno}
+	\linenumbers
+	\usepackage[authormarkup=none,defaultcolor=orange]{changes}
+\or % main_textonly
+	\usepackage[nolists,markers,figuresonly]{endfloat}
+	\renewcommand{\processdelayedfloats}{}
+	\usepackage[final]{changes}
+\or % main_textonly_trackchanges
+	\usepackage[nolists,markers,figuresonly]{endfloat}
+	\renewcommand{\processdelayedfloats}{}
+	\usepackage[authormarkup=none,defaultcolor=orange]{changes}
+\fi
 
 
 \title{Proceedings of the OHBM Brainhack 2022}
