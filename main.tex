@@ -1,36 +1,3 @@
-\ifx\condition\undefined
-\immediate\write18{
-echo pdflatex
-−−jobname=main
-"\gdef\condition{0}\input\jobname"}
-\immediate\write18{
-pdflatex
-−−jobname=main_trackchanges
-"\gdef\string\condition{1}
-\string\input\space\jobname"}
-\immediate\write18{
-pdflatex
-−−jobname=main_linenum
-"\gdef\string\condition{2}
-\string\input\space\jobname"}
-\immediate\write18{
-pdflatex
-−−jobname=main_linenum_trackchanges
-"\gdef\string\condition{3}
-\string\input\space\jobname"}
-\immediate\write18{
-pdflatex
-−−jobname=main_textonly
-"\gdef\string\condition{4}
-\string\input\space\jobname"}
-\immediate\write18{
-pdflatex
-−−jobname=main_textonly_trackchanges
-"\gdef\string\condition{4}
-\string\input\space\jobname"}
-\expandafter\stop
-\fi
-
 \documentclass[12pt,a4paper,onecolumn]{article}
 
 %--------------------------------------------
