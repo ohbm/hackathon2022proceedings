@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 declare -A job
-job=( [0]=main [1]=main_trackchanges [2]=main_linenum [3]=main_linenum_trackchanges [4]=main_textonly [5]=main_textonly_trackchanges
+job=( [0]=main [1]=main_trackchanges [2]=main_linenum [3]=main_linenum_trackchanges [4]=main_textonly [5]=main_textonly_trackchanges [6]=main_noligature
 )
 n_job=${#job[@]}
 let n_job--

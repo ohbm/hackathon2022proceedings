@@ -111,6 +111,10 @@
 	\usepackage[nolists,markers,figuresonly]{endfloat}
 	\renewcommand{\processdelayedfloats}{}
 	\usepackage[authormarkup=none,defaultcolor=orange]{changes}
+\or % main no ligatures
+	\usepackage[final]{changes}
+	\usepackage{microtype}
+	\DisableLigatures[f]{encoding = *, family = * }
 \fi
 
 
